@@ -1,6 +1,6 @@
 ﻿namespace FishFinderX
 {
-    partial class Form1
+    partial class FishFinder
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FishFinder));
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.labelPoints = new System.Windows.Forms.Label();
+            this.labelFilename = new System.Windows.Forms.Label();
+            this.labelMin = new System.Windows.Forms.Label();
+            this.labelMax = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.labelHelp = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BackColor = System.Drawing.Color.DimGray;
+            this.pictureBox.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox.TabIndex = 0;
+            this.pictureBox.TabStop = false;
+            // 
+            // labelPoints
+            // 
+            this.labelPoints.AutoSize = true;
+            this.labelPoints.ForeColor = System.Drawing.Color.Gold;
+            this.labelPoints.Location = new System.Drawing.Point(220, 9);
+            this.labelPoints.Name = "labelPoints";
+            this.labelPoints.Size = new System.Drawing.Size(52, 13);
+            this.labelPoints.TabIndex = 1;
+            this.labelPoints.Text = "{x=0;y=0}";
+            // 
+            // labelFilename
+            // 
+            this.labelFilename.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.labelFilename.AutoSize = true;
+            this.labelFilename.ForeColor = System.Drawing.Color.Gold;
+            this.labelFilename.Location = new System.Drawing.Point(340, 431);
+            this.labelFilename.Name = "labelFilename";
+            this.labelFilename.Size = new System.Drawing.Size(46, 13);
+            this.labelFilename.TabIndex = 2;
+            this.labelFilename.Text = "filename";
+            // 
+            // labelMin
+            // 
+            this.labelMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelMin.AutoSize = true;
+            this.labelMin.ForeColor = System.Drawing.Color.Gold;
+            this.labelMin.Location = new System.Drawing.Point(10, 431);
+            this.labelMin.Name = "labelMin";
+            this.labelMin.Size = new System.Drawing.Size(23, 13);
+            this.labelMin.TabIndex = 3;
+            this.labelMin.Text = "min";
+            // 
+            // labelMax
+            // 
+            this.labelMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMax.AutoSize = true;
+            this.labelMax.ForeColor = System.Drawing.Color.Gold;
+            this.labelMax.Location = new System.Drawing.Point(717, 431);
+            this.labelMax.Name = "labelMax";
+            this.labelMax.Size = new System.Drawing.Size(26, 13);
+            this.labelMax.TabIndex = 4;
+            this.labelMax.Text = "max";
+            // 
+            // progressBar
+            // 
+            this.progressBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.progressBar.Location = new System.Drawing.Point(1, 405);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(753, 23);
+            this.progressBar.TabIndex = 5;
+            // 
+            // labelHelp
+            // 
+            this.labelHelp.AutoSize = true;
+            this.labelHelp.BackColor = System.Drawing.Color.LightGray;
+            this.labelHelp.Location = new System.Drawing.Point(24, 98);
+            this.labelHelp.Name = "labelHelp";
+            this.labelHelp.Size = new System.Drawing.Size(220, 130);
+            this.labelHelp.TabIndex = 6;
+            this.labelHelp.Text = resources.GetString("labelHelp.Text");
+            // 
+            // FishFinder
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(755, 453);
+            this.Controls.Add(this.labelHelp);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.labelMax);
+            this.Controls.Add(this.labelMin);
+            this.Controls.Add(this.labelFilename);
+            this.Controls.Add(this.labelPoints);
+            this.Controls.Add(this.pictureBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FishFinder";
+            this.Text = "Fish Finder";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FishFinder_FormClosing);
+            this.Load += new System.EventHandler(this.FishFinder_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FishFinder_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.Label labelPoints;
+        private System.Windows.Forms.Label labelFilename;
+        private System.Windows.Forms.Label labelMin;
+        private System.Windows.Forms.Label labelMax;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label labelHelp;
     }
 }
 
