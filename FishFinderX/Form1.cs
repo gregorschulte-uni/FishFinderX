@@ -18,8 +18,7 @@ namespace FishFinderX
         {
             InitializeComponent();
         }
-
-
+        
         Int32           maximum         = 0;
         Int32           position        = 0;
         String          sourcefolder    = "empty";
