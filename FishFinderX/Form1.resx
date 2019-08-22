@@ -121,15 +121,23 @@
     <value>17, 17</value>
   </metadata>
   <data name="labelHelp.Text" xml:space="preserve">
-    <value>    alt + F4 / ESC          quit program
-    h                       display this help
+    <value>   
+    
+    HELP:
+    alt + F4 / ESC          quit program
+    H                       toggle help visibility
     J                       show filename and position
+    M                       toggle marker visibility
     O                       open folder
     W                       write results to file
     left                    back one image
     right                   forward one image
     shift + left            back 100 images
     shift + right           forward 100 images
-    click                   locate fish</value>
+    mousewheel              forward / backward
+    mouseclick              locate fish</value>
   </data>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>180, 17</value>
+  </metadata>
 </root>

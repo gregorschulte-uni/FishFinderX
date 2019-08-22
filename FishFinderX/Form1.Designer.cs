@@ -37,24 +37,27 @@
             this.labelMax = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.labelHelp = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox
             // 
             this.pictureBox.BackColor = System.Drawing.Color.DimGray;
-            this.pictureBox.Location = new System.Drawing.Point(15, 12);
+            this.pictureBox.Location = new System.Drawing.Point(90, 12);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(100, 50);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
+            this.pictureBox.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox_Paint);
+            this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
             // 
             // labelPoints
             // 
             this.labelPoints.AutoSize = true;
             this.labelPoints.ForeColor = System.Drawing.Color.Gold;
-            this.labelPoints.Location = new System.Drawing.Point(220, 9);
+            this.labelPoints.Location = new System.Drawing.Point(10, 9);
             this.labelPoints.Name = "labelPoints";
             this.labelPoints.Size = new System.Drawing.Size(52, 13);
             this.labelPoints.TabIndex = 1;
@@ -99,15 +102,17 @@
             this.progressBar.Location = new System.Drawing.Point(1, 405);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(753, 23);
+            this.progressBar.Step = 1;
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.progressBar.TabIndex = 5;
             // 
             // labelHelp
             // 
-            this.labelHelp.AutoSize = true;
             this.labelHelp.BackColor = System.Drawing.Color.LightGray;
-            this.labelHelp.Location = new System.Drawing.Point(24, 98);
+            this.labelHelp.Font = new System.Drawing.Font("Monospac821 BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHelp.Location = new System.Drawing.Point(40, 65);
             this.labelHelp.Name = "labelHelp";
-            this.labelHelp.Size = new System.Drawing.Size(220, 130);
+            this.labelHelp.Size = new System.Drawing.Size(569, 314);
             this.labelHelp.TabIndex = 6;
             this.labelHelp.Text = resources.GetString("labelHelp.Text");
             // 
@@ -131,6 +136,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FishFinder_FormClosing);
             this.Load += new System.EventHandler(this.FishFinder_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FishFinder_KeyDown);
+            this.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.FishFinder_MouseWheel);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -147,6 +153,8 @@
         private System.Windows.Forms.Label labelMax;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label labelHelp;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        
     }
 }
 
