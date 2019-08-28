@@ -22,7 +22,7 @@ namespace FishFinderX
         Int32           maximum         = 0;
         Int32           position        = 0;
         String          sourcefolder    = "empty";
-        String[]        filters         = new String[] { "jpg", "jpeg" };
+        String[]        filters         = new String[] { "jpg", "jpeg", "png" };
         String[]        table;
         String[]        files;
         Point[]         points;

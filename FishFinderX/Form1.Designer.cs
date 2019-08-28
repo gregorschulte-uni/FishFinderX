@@ -129,6 +129,7 @@
             this.Controls.Add(this.labelFilename);
             this.Controls.Add(this.labelPoints);
             this.Controls.Add(this.pictureBox);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FishFinder";
             this.Text = "Fish Finder";
