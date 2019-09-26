@@ -135,7 +135,10 @@
     shift + left            back 100 images
     shift + right           forward 100 images
     mousewheel              forward / backward
-    mouseclick              locate fish</value>
+    mouseclick              locate fish
+    Numpad 0                skip images at the beginning (0;0)
+    Numpad 1                fish swimming or not on sand (1;1)
+    NumPad 2                fish invisible (2;2)</value>
   </data>
   <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>180, 17</value>

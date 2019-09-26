@@ -68,7 +68,7 @@
             this.labelFilename.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelFilename.AutoSize = true;
             this.labelFilename.ForeColor = System.Drawing.Color.Gold;
-            this.labelFilename.Location = new System.Drawing.Point(340, 431);
+            this.labelFilename.Location = new System.Drawing.Point(349, 482);
             this.labelFilename.Name = "labelFilename";
             this.labelFilename.Size = new System.Drawing.Size(46, 13);
             this.labelFilename.TabIndex = 2;
@@ -79,7 +79,7 @@
             this.labelMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelMin.AutoSize = true;
             this.labelMin.ForeColor = System.Drawing.Color.Gold;
-            this.labelMin.Location = new System.Drawing.Point(10, 431);
+            this.labelMin.Location = new System.Drawing.Point(10, 482);
             this.labelMin.Name = "labelMin";
             this.labelMin.Size = new System.Drawing.Size(23, 13);
             this.labelMin.TabIndex = 3;
@@ -90,7 +90,7 @@
             this.labelMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMax.AutoSize = true;
             this.labelMax.ForeColor = System.Drawing.Color.Gold;
-            this.labelMax.Location = new System.Drawing.Point(717, 431);
+            this.labelMax.Location = new System.Drawing.Point(734, 482);
             this.labelMax.Name = "labelMax";
             this.labelMax.Size = new System.Drawing.Size(26, 13);
             this.labelMax.TabIndex = 4;
@@ -99,7 +99,7 @@
             // progressBar
             // 
             this.progressBar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.progressBar.Location = new System.Drawing.Point(1, 405);
+            this.progressBar.Location = new System.Drawing.Point(10, 456);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(753, 23);
             this.progressBar.Step = 1;
@@ -112,16 +112,17 @@
             this.labelHelp.Font = new System.Drawing.Font("Monospac821 BT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelHelp.Location = new System.Drawing.Point(40, 65);
             this.labelHelp.Name = "labelHelp";
-            this.labelHelp.Size = new System.Drawing.Size(569, 314);
+            this.labelHelp.Size = new System.Drawing.Size(668, 365);
             this.labelHelp.TabIndex = 6;
             this.labelHelp.Text = resources.GetString("labelHelp.Text");
+            this.labelHelp.Click += new System.EventHandler(this.labelHelp_Click);
             // 
             // FishFinder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(755, 453);
+            this.ClientSize = new System.Drawing.Size(772, 504);
             this.Controls.Add(this.labelHelp);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.labelMax);

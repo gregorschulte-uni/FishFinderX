@@ -106,6 +106,33 @@ namespace FishFinderX
                         pictureBox.Refresh();
                         break;
 
+                    case Keys.NumPad0: // skip images in beginning when slider is still in 
+                        if (files != null)
+                            { 
+                            points[position].X = 0;
+                            points[position].Y = 0;
+                            nextImage();
+                            }
+                        break;
+
+                    case Keys.NumPad1:  // swimming & fish not on Sand
+                        if (files != null)
+                        {
+                            points[position].X = 1;
+                            points[position].Y = 1;
+                            nextImage();
+                        }
+                        break;
+
+                    case Keys.NumPad2: // fish not visible
+                        if (files != null)
+                        {
+                            points[position].X = 2;
+                            points[position].Y = 2;
+                            nextImage();
+                        }
+                        break;
+
 
                     case Keys.O:
                         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
@@ -132,7 +159,7 @@ namespace FishFinderX
                                     points[i].X = -1;
                                     points[i].Y = -1;
                                 }
-
+                                labelHelp.Visible = false;
                                 updateInterface();
 
                             }
@@ -356,13 +383,13 @@ namespace FishFinderX
             Point emptypoint = new Point(-1, -1);
             if (points != null && !Array.Exists(points, element => element.Equals(emptypoint)))
             {
-                string outfile      = Path.GetFileNameWithoutExtension(files[0]);
+                string outfile      = Path.GetFileNameWithoutExtension(files[0]).Substring(0,3);
                 string outfolder    = Path.GetDirectoryName(files[0]);
                 table               = new string[files.Length];
 
                 for (int i = 0; i < files.Length; i++)
                     {
-                        table[i] = Path.GetFileNameWithoutExtension(files[i]) + ";" + points[i].X.ToString().PadLeft(4, '0') + ";" + points[i].Y.ToString().PadLeft(4, '0');
+                        table[i] = Path.GetFileNameWithoutExtension(files[i]).ToString().Substring(0,3) + ";" +Path.GetFileNameWithoutExtension(files[i]) + ";"+(i + 1).ToString().PadLeft(4,'0') + ";" + points[i].X.ToString().PadLeft(4, '0') + ";" + points[i].Y.ToString().PadLeft(4, '0');
                     }
 
                 File.WriteAllLines(outfolder + "\\" + outfile + ".txt", table, Encoding.UTF8);
@@ -390,6 +417,10 @@ namespace FishFinderX
                 }
             }
         }
-        
+
+        private void labelHelp_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
