@@ -143,17 +143,14 @@ namespace FishFinderX
                                 Array.Clear(files, 0, files.Length);
                                 Console.Beep();
                             }
-                            
                             sourcefolder = folderBrowserDialog.SelectedPath;
                             files = GetFilesFrom(sourcefolder, filters, false);
-                            if (true)
+                            if (files.Length > 0 )
                             {
                                 progressBar.Maximum     = files.Length - 1;
                                 maximum                 = files.Length;
                                 labelMax.Text           = maximum.ToString();
-
                                 points                  = new Point[files.Length];
-
                                 for (int i = 0; i < points.Length; i++)
                                 {
                                     points[i].X = -1;
@@ -161,10 +158,8 @@ namespace FishFinderX
                                 }
                                 labelHelp.Visible = false;
                                 updateInterface();
-
                             }
-                            else MessageBox.Show("Filenames do not match expected scheme");
-
+                            else MessageBox.Show("No files found with matching extension (jpg, jpeg, png).");
                         }
                         break;
 
